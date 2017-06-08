@@ -1,0 +1,153 @@
+<div ng-controller="HomeCtrl">
+    <div class="slideshow-wrapper">
+        <div class="bar visible-lg visible-md inset-bottom"></div>
+        <div class="container-fluid noGutter">
+            <div id="homeSlider" class="carousel slide carousel-fade bottom" data-ride="carousel" data-interval="4442500" data-pause="hover">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    <li data-target="#homeSlider" data-slide-to="0" class="active"></li>
+                    <li data-target="#homeSlider" data-slide-to="1"></li>
+                    <li data-target="#homeSlider" data-slide-to="2"></li>
+                    <li data-target="#homeSlider" data-slide-to="3"></li>
+                </ol>
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner" role="listbox">
+                    <div class="item mainItem active"  style="background-image: url('/assets/stock_images/brennan-pool-care-4.jpg')">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-xs-12 col-md-6 col-lg-8">
+                                    <div class="contentBox text-center textBlackBg">
+                                        <h2>East Valley Pool Service</h2>
+                                        <h3>Gilbert, Queen Creek, Mesa, Gold Canyon</h3>
+                                        <a ui-sref="contact" class="btn squareBtn squareBtnBlue">Learn More</a>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-md-6 col-lg-4">
+                                    <div class="text-center cardbox">
+                                        <h2>Online Offer</h2>
+                                        <h3>Receive 25% Off</h3>
+                                        <p>Your First Months Service</p>
+                                        <a ui-sref="contact" class="btn squareBtn squareBtnBlue">Call 480-266-3468</a>
+                                        <p class="disclaimer">Must Mention Online Offer.<br> May not be combined with other offers.<br> Limit 1 per household.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item" ng-class="" ng-repeat="item in slideshow" style="background-image: url('/assets/stock_images/{{item.img}}')">
+                        <div class="row">
+                            <div class="col-xs-12 col-md-6 col-lg-8">
+                                <div class="contentBox text-center">
+                                    <h2>{{item.headline}}</h2>
+                                    <h3 class="textBlackBg">{{item.subtext}}</h3>
+                                    <a ui-sref="contact" class="btn squareBtn {{item.btnClass}}">Learn More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- <hr class="slit hidden-xs"> -->
+        </div>
+    </div>
+
+    <br>
+    <div class="container-fluid">
+        <div class="container">
+            <div class="row cardRow">
+                <div class="col-lg-12 ">
+                    <div class="cardbox headCardBox">
+                        <h1 class="text-center text-blue">Arizona's Premier Pool Service</h1>
+                        <h2 class="text-center text-gray subtext">Family Owned and Operated</h2>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="cardbox">
+                        <i class="fa fa-money"></i>
+                        <h2>Save Time and Money</h2>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="cardbox">
+                        <i class="fa fa-tint"></i>
+                        <h2>Keep Your Pool Clean</h2>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="cardbox">
+                        <i class="fa fa-smile-o"></i>
+                        <h2>Quality Customer Service</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid inset-top-bottom bg-offwhite">
+        <div class="container">
+            <div class="row cardRow">
+                <div class="col-xs-12 sectionHead">
+                    <h3><i class="fa fa-life-ring"></i>&nbsp; Our Services</h3>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 outerbox keyBox slideanim" ng-repeat="service in homeServices">
+                    <a href="{{service.url}}" title="{{service.name}}">
+                        <div class="cardbox text-center" style="background-image: url(/assets/stock_images/service_images/{{service.img}})">
+                            <h3>{{service.name}}</h3>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Testimonials Included from partial  -->
+<section>
+    <div ng-include="'/templates/partials/testimonialSlider.html'" class="slideanim-left"></div>
+</section>
+<section class="homeContact">
+    <div class="container-fluid">
+        <div class="container contactSection">
+            <div class="row">
+                <div class="col-lg-8 slideanim-right">
+                    <br>
+                    <!--Contact Form Included from partial  -->
+                    <div class="cardbox formBox">
+                        <h2><i class="fa fa-envelope"></i> Contact Us</h2>
+                        <h3>Fill out the form below and we will contact you soon.</h3>
+                        <hr>
+                        <div ng-include="'/templates/partials/contact-form.html'"></div>
+                    </div>
+                </div>
+                <div class="col-lg-4 slideanim-left">
+                    <br>
+                    <div class="cardbox sideBox">
+                        <h2><i class="fa fa-mobile"></i>&nbsp; Call Us</h2>
+                        <div class="text-center">
+                            <p>Have a question? Give us a call</p>
+                            <a href="tel:{{phone.office}}" class="btn squareBtn squareBtnBlue">{{phone.office}}</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 slideanim-left">
+                    <br>
+                    <div class="cardbox sideBox">
+                        <h2><i class="fa fa-map-marker"></i>&nbsp; Service Areas</h2>
+                        <div class="text-center">
+                            <p>See the areas that we service</p>
+                            <a ui-sref="sales" class="btn squareBtn squareBtnBlue">View Service Areas</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 slideanim-left">
+                    <br>
+                    <div class="cardbox sideBox">
+                        <h2><i class="fa fa-comments"></i>&nbsp; FAQ's</h2>
+                        <div class="text-center">
+                            <p>Maybe someone has already asked</p>
+                            <a ui-sref="support" class="btn squareBtn squareBtnBlue">View FAQ's</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+</div>

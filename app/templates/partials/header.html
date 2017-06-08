@@ -1,0 +1,26 @@
+<nav class="navbar navbar-fixed-top " >
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle burgerButton burger" data-toggle="collapse" data-target="#myNavbar" ng-class="{'active': isActive}" ng-click="activeButton()" >
+                <span></span>
+            </button>
+            <a class="navbar-brand" ui-sref="home" title="iMs-Trident">
+                <img src="/assets/logos/brennan_poolcare_glow.png" class="img-responsive" alt="ims-logo, png, integrated management solutions logo">
+            </a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar" ng-cloak>
+            <ul class="nav navbar-nav navbar-right" ng-cloak>
+                <li ng-repeat="link in mainNav"  ng-class="{'dropdown': link.hasSubmenu}" ng-cloak>
+                    <!--IF NO SUB MENU  -->
+                    <a ng-if="link.href === true" href="{{link.url}}" class="main-btn" title="{{link.name}}" target="_blank">{{link.name}}</a>
+                    <a ng-if="link.hasSubmenu === false && link.href === false" ui-sref="{{link.url}}" class="main-btn" title="{{link.name}}" data-toggle="collapse" data-target="#myNavbar" ng-click="activeButton()" ng-cloak>{{link.name}}</a>
+                    <!--IF THERE IS A SUB MENU  -->
+                    <a ng-if="link.hasSubmenu === true" class="dropdown-toggle main-btn" data-toggle="dropdown" href="#">{{link.name}} <b class="caret" ng-cloak></b></a>
+                    <ul ng-if="link.hasSubmenu === true" class="dropdown-menu" ng-cloak>
+                        <li ng-repeat="subLink in link.subMenu"><a ui-sref="{{subLink.url}}" title="{{subLink.name}}" data-toggle="collapse" data-target="#myNavbar" ng-click="activeButton()" ng-cloak><i class="fa {{subLink.icon}}"></i>&nbsp; {{subLink.name}}</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>

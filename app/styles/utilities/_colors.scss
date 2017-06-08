@@ -1,0 +1,27 @@
+/* Main Colors*/
+$blue: #12529D;
+$lightblue: #54a1da;
+$gray: #59595c;
+$shark-gray: #C7CFD4;
+$red: #ED1C24;
+$dark-red: #CC0000;
+
+/* Grays*/
+$darkgray: #555555;
+$gray: #606060;
+$lightgray: #f2f2f2;
+$offwhite: #f9f9f9;
+
+/* Bootstrap colors*/
+$success:#00C851 ;
+$success-dark: #007E33;
+$danger: #ff4444;
+$danger-dark: #CC0000;
+$warning: #ffbb33;
+$warning-dark: #FF8800;
+
+/* Gradients*/
+$newBlue-gradient: radial-gradient(ellipse at center, $lightblue, $blue);
+$grayGradient: radial-gradient(ellipse at center, #808080, $gray);
+
+$textBlackBg: linear-gradient(to right, transparent 0%, rgba(0,0,0,0.2) 5%, rgba(0,0,0,0.4) 10%, rgba(0,0,0,0.4) 100%);

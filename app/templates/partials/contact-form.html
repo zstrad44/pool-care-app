@@ -1,0 +1,64 @@
+<form>
+    <div class="row">
+        <div class="col-xs-12 col-lg-6">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" class="form-control" id="name" placeholder="Enter Name">
+            </div>
+        </div>
+        <div class="col-xs-12 col-lg-6">
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="text" class="form-control" id="email" placeholder="Enter Email">
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-lg-6">
+            <div class="form-group">
+                <label for="phone">Phone:</label>
+                <input type="text" class="form-control" id="phone" placeholder="Enter Phone Nmber">
+            </div>
+        </div>
+        <div class="col-xs-12 col-lg-6">
+            <div class="form-group">
+                <label for="zipCode">Service Location Zip Code:</label>
+                <input type="text" class="form-control" id="phone" placeholder="Zip Code">
+            </div>
+        </div>
+        <!-- <div class="col-xs-12 col-lg-6">
+            <div class="form-group">
+                <label for="productSelect">Product of Interest:</label>
+                <select class="form-control" id="productSelect">
+                    <option value="" disabled selected>Please Make Selection</option>
+                    <option value="connexis-cloud">Connexis Cloud</option>
+                    <option value="cnxcase">CnxCASE</option>
+                    <option value="cnxlab">CnxLAB</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+        </div> -->
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="form-group">
+                <label for="comment">Message:</label>
+                <textarea class="form-control" rows="2" id="comment"></textarea>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="form-group">
+               <label>Preferred Contact Method: &nbsp;</label>
+                    <label class="radio-inline"><input type="radio" name="optradio">Contact me by phone</label>
+                    <label class="radio-inline"><input type="radio" name="optradio">Contact me by email</label>
+                    <label class="radio-inline"><input type="radio" name="optradio">No preference</label>
+            </div>
+        </div>
+    </div>
+    <div class="text-right">
+        <button type="submit" class="btn btn-lg squareBtn squareBtnBlue" ng-mousedown="message = 'Sending...'" ng-mouseover="message = 'Ready to Send'" ng-mouseleave="message = 'Send'" ng-init="message = 'Send'"><i class="fa fa-send"></i>&nbsp; {{message}}</button>
+    </div>
+</form>
+<br>

@@ -1,0 +1,678 @@
+@import "utilities/colors";
+/*SLIDESHOW STYLES START*/
+.slideshow-wrapper {
+    /*margin-top: 40px;*/
+
+    .bar {
+        /*height: 45vh;*/
+        width: 100%;
+        position: absolute;
+        top: 115px;
+        left: 0;
+        background: $lightblue;
+        background: $newBlue-gradient;
+    }
+}
+@media (max-width: 768px) {
+    .slideshow-wrapper {
+        margin-top: -30px;
+    }
+}
+
+#homeSlider {
+    background-color: $darkgray;
+    -webkit-box-shadow: 0 25px 25px -25px #2C3E50;
+            box-shadow: 0 25px 25px -25px #2C3E50;
+
+    .carousel-inner {
+        border-bottom: 5px solid $darkgray;
+        background-color: #fff;
+        margin-top: -40px;
+
+        .item {
+            min-height: 450px;
+            width: auto;
+            .squareBtnBlue {
+                background-color: #ffffff;
+                color: $blue;
+                &:hover {
+                    background-color: $blue;
+                    color: #fff;
+                }
+            }
+            .squareBtnGray {
+                background-color: #ffffff;
+                color: $gray;
+                &:hover {
+                    background-color: $gray;
+                    color: #ffffff;
+                }
+            }
+            .textBlackBg {
+                background: rgba(0,0,0,0.5);
+                color: #ffffff;
+            }
+        }
+        .mainItem {
+            .contentBox {
+                min-height: 200px;
+                margin: 42px 0 20px;
+                padding: 20px 10px;
+                h2 {
+                    font-size: 4em;
+                    margin-top: 0px;
+                }
+                h3 {
+                    color: #ffffff;
+                    padding: 10px;
+                }
+                .textBlackBg {
+                    background: rgba(0,0,0,0.5);
+                    color: #ffffff;
+                }
+                a {
+                    margin-bottom: 20px;
+                    width: 40%;
+                }
+
+            }
+            .cardbox {
+                background-color: #ffffff;
+                margin-top: 40px;
+                h2 {
+                    color: $blue;
+                    font-size: 3em;
+                    margin-top: 5px;
+                }
+                h3 {
+                    background-color: transparent;
+                    background: transparent;
+                    color: $success;
+                    font-size: 2em;
+                }
+                .btn {
+                    width: 100% !important;
+                    background-color: $blue;
+                    color: #ffffff;
+                    margin: 15px 0;
+                    &:hover {
+                        background-color: $success;
+                    }
+                }
+                p {
+                    margin: 0 !important;
+
+                }
+                p.disclaimer {
+                    font-size: .8em;
+                    padding: 0;
+                    line-height: 1;
+                }
+            }
+        }
+        @media(max-width: 1000px) {
+            .mainItem {
+                .contentBox {
+                    margin-top: 40px;
+                    h2 {
+                        font-size: 3em;
+                    }
+                    a {
+                        margin-bottom: 20px;
+                        width: 60% !important;
+                        font-size: 1.5em;
+                    }
+
+                }
+                .cardbox {
+                    background-color: #ffffff;
+                    margin: 15px 0;
+                    .btn {
+                        margin: 15px 0;
+                    }
+                    p {
+                        margin: 0 !important;
+                    }
+                    p.disclaimer {
+                        font-size: .8em;
+                    }
+                }
+            }
+        }
+    }
+
+    .carousel-indicators {
+        bottom: 2px;
+        li {
+            background-color: $darkgray;
+
+            &.active,
+            &:hover {
+                background-color: $blue;
+            }
+        }
+    }
+}
+@media (min-width:1200px) {
+    .slideshow-wrapper {
+        /* margin-top: 20vh;*/
+        margin-bottom: 60px;
+    }
+}
+@media (min-width: 1000px) {
+    #homeSlider .carousel-inner .item {
+        height: 450px;
+        width: 100%;
+        background-size: cover !important;
+    }
+}
+/*SLIDES DESKTOP BREAKPOINTS*/
+@media (min-width: 768px) {
+    /*SLIDE 1 */
+    #homeSlider .item {
+        background-size: cover;
+        background-repeat: no-repeat !important;
+        a {
+            width: 200px !important;
+            font-size: 1.5em;
+            margin-top: 15px;
+        }
+        &:nth-child(1) {
+            background: #fafafa;
+            padding: 10px 10px 25px;
+            background-position: 0px -500px !important;
+            background-size: cover !important;
+            .cardbox {
+                background-color: #ffffff;
+                margin-top: 40px;
+                h2 {
+                    color: $blue;
+                    font-size: 3em;
+                    margin-top: 5px;
+                }
+                h3 {
+                    background-color: transparent;
+                    background: transparent;
+                    color: $success;
+                    font-size: 2em;
+                }
+                .btn {
+                    width: 100% !important;
+                    background-color: $blue;
+                    color: #ffffff;
+                    margin-bottom: 10px;
+                    &:hover {
+                        background-color: $success;
+                    }
+                }
+                p {
+                    margin: 0 !important;
+
+                }
+                p.disclaimer {
+                    font-size: .8em;
+                    padding: 0;
+                    line-height: 1;
+                }
+            }
+        }
+
+        &:nth-child(2) {
+            background: #fff;
+            padding: 20px 10px 10px;
+            background-position: 0% -480px !important;
+        }
+
+        &:nth-child(3) {
+            background-position: bottom;
+        }
+
+        &:nth-child(4) {
+            background: #fafafa;
+            background-position: bottom;
+        }
+    }
+}
+@media (max-width: 767px) {
+    /*SLIDE 1 */
+    #homeSlider .item {
+        &:nth-child(1) {
+            background: #fafafa;
+            background-position: center;
+            padding: 10px 10px 25px;
+        }
+
+        &:nth-child(2) {
+            background: #fff;
+            background-position: bottom;
+            padding: 50px 10px 10px;
+        }
+        &:nth-child(3) {
+            background: #fff;
+        }
+
+        &:nth-child(4) {
+            background: #fafafa;
+            background-position: bottom;
+        }
+    }
+}
+/*CUSTOM CSS*/
+.carousel-fade {
+    .carousel-inner {
+        .item {
+            opacity: 0;
+            -webkit-transition-property: opacity;
+            -o-transition-property: opacity;
+            transition-property: opacity;
+        }
+
+        .active {
+            opacity: 1;
+
+            &.left,
+            &.right {
+                left: 0;
+                opacity: 0;
+                z-index: 1;
+            }
+        }
+
+        .next.left,
+        .prev.right {
+            opacity: 1;
+        }
+    }
+
+    .carousel-control {
+        z-index: 2;
+    }
+}
+/*
+WHAT IS NEW IN 3.3: "Added transforms to improve carousel performance in modern browsers."
+now override the 3.3 new styles for modern browsers & apply opacity
+*/
+@media all and (transform-3d), (-webkit-transform-3d) {
+    .carousel-fade .carousel-inner > .item {
+        &.active.left,
+        &.active.right,
+        &.next,
+        &.prev {
+            opacity: 0;
+            -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+        }
+
+        &.active,
+        &.next.left,
+        &.prev.right {
+            opacity: 1;
+            -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+        }
+    }
+}
+/*SLIDESHOW STYLES END*/
+/*IMS INTRO START*/
+.cardRow {
+    margin-bottom: 60px;
+
+    h1 {
+        font-size: 3em;
+        margin: 0;
+    }
+
+    .subtext {
+        font-size: 2.5em;
+        margin-top: 0;
+    }
+
+
+    .cardbox {
+        text-align: center;
+        .fa {
+            text-align: center;
+            height: 75px;
+            font-size: 4.2em;
+            color: $blue;
+            -webkit-filter: drop-shadow(2px 2px 2px rgba(0,0,0,.5));
+        }
+        h2 {
+            color: $gray;
+            font-size: 2em;
+        }
+
+        h3 {
+            font-size: 1.5em;
+            color: $gray;
+        }
+    }
+    .sectionHead {
+        h3 {
+            font-size: 2.5em;
+            margin: 60px 0 30px;
+            color: $gray;
+        }
+    }
+
+    .keyBox {
+        a {
+            &:hover {
+                text-decoration: none;
+            }
+        }
+        .cardbox {
+            background-size: cover !important;
+            min-height: 170px;
+            margin-bottom: 30px;
+            background-blend-mode: overlay;
+            background-color: rgba(33, 33, 33, 0.3);
+            &:hover {
+                background-color: rgba(33, 33, 33, 0.8);
+                -webkit-transition: background 0.4s ease-out, -webkit-box-shadow 0.3s ease;
+                transition: background 0.4s ease-out, -webkit-box-shadow 0.3s ease;
+                -o-transition: background 0.4s ease-out, box-shadow 0.3s ease;
+                transition: background 0.4s ease-out, box-shadow 0.3s ease;
+                transition: background 0.4s ease-out, box-shadow 0.3s ease, -webkit-box-shadow 0.3s ease;
+                -webkit-box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.33);
+                        box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.33);
+                h3 {
+                    background-color: rgba(0,0,0,0);
+                    -webkit-transition: .3s ease;
+                    -o-transition: .3s ease;
+                    transition: .3s ease;
+                }
+            }
+            h3 {
+                /* background-color: rgba(0,0,0,.2);*/
+                padding: 5px 3px;
+                font-weight: 900;
+                color: #fff;
+                /* text-transform: uppercase;*/
+                margin: 0;
+                position: absolute;
+                top: 70%;
+                left: 40%;
+                font-size: 2rem;
+                -webkit-transform: translate(-50%, -50%);
+                    -ms-transform: translate(-50%, -50%);
+                        transform: translate(-50%, -50%);
+                text-shadow: 1px 1px 1px #000;
+            }
+        }
+    }
+    @media(max-width: 768px) {
+        h1 {
+            font-size: 1.4em;
+            font-weight: bold;
+        }
+
+        .subtext {
+            font-size: 1.5em;
+            margin-top: 10px;
+        }
+
+        .keyBox {
+            .cardbox {
+                min-height: 170px;
+                margin-bottom: 10px;
+                -webkit-box-shadow: 3px 3px 5px rgba(0,0,0,.2);
+                        box-shadow: 3px 3px 5px rgba(0,0,0,.2);
+            }
+        }
+    }
+}
+/*IMS INTRO END*/
+.headCardBox {
+    margin-bottom: 20px;
+}
+@media(min-width: 1200px) {
+    .headCardBox {
+        margin-bottom: 60px;
+    }
+}
+
+.homeList {
+    padding: 0 5px;
+
+    li {
+        font-size: 1.35em;
+
+        i {
+            color: $success;
+            padding-top: 3px;
+        }
+    }
+}
+.homeSection {
+    .homeSectionBox {
+        padding:20px 0 60px;
+        .headBox {
+            margin-bottom: 30px;
+            .cnxImg {
+
+            }
+            h2 {
+                margin-top:-10px;
+                padding:5px 0;
+                color: $gray;
+                font-size: 2em
+            }
+        }
+        .contentBox {
+            margin-top: 50px;
+            h2 {
+                margin-top: 5px;
+                text-align: center;
+            }
+        }
+    }
+}
+@media(max-width: 1000px) {
+    .homeSection {
+        .headBox {
+            margin-bottom: 15px;
+            h2 {
+                margin-top: -5px;
+                font-size: 1.5em;
+            }
+        }
+        .contentBox {
+            margin-top: 10px;
+            h2 {
+                text-align: left;
+            }
+        }
+        .imgBox {
+            a {
+                margin-top: 20px;
+            }
+        }
+    }
+}
+
+/*TESTIMONIALS*/
+.testimonial-section {
+    .item {
+        padding: 20px 15px;
+        margin: 0 auto;
+    }
+
+    .testimonialCard {
+        padding: 15px;
+        background-color: #fff;
+        border: 2px inset $gray;
+        /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,f9f9f9+49,f3f3f3+49,ffffff+78 */
+        background: #ffffff;
+        /* Old browsers */
+        /* FF3.6-15 */
+        /* Chrome10-25,Safari5.1-6 */
+        background: -webkit-linear-gradient(305deg, #ffffff 50%, #f9f9f9 60%, #f3f3f3 60%, #ffffff 78%);
+        background: -o-linear-gradient(305deg, #ffffff 50%, #f9f9f9 60%, #f3f3f3 60%, #ffffff 78%);
+        background: linear-gradient(145deg, #ffffff 50%, #f9f9f9 60%, #f3f3f3 60%, #ffffff 78%);
+        /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr= '#ffffff', endColorstr='#ffffff',GradientType=1 );
+        /* IE6-9 fallback on horizontal gradient */
+        p {
+            font-size: 1.4em;
+            padding-bottom: 5px;
+        }
+
+        hr {
+            margin: 0;
+        }
+
+        a {
+            font-size: 1.1em;
+            width: 200px;
+            margin-top: 24px;
+            padding: 5px 0;
+        }
+
+        .testimonialClient {}
+
+        .testimonialBtn {
+            text-align: center;
+        }
+
+        &::before {
+            font-family: FontAwesome;
+            content: "\f10d";
+            padding: 10px;
+            background-color: $darkgray;
+            border: 1px solid $blue;
+            top: -25px;
+            font-size: 2.3em;
+            color: #fff;
+            position: relative;
+            -webkit-box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+                    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+        }
+    }
+
+    .slick-next:before {
+        color: $gray;
+    }
+}
+
+.slick-prev:before {
+    color: $gray;
+}
+@media (max-width: 768px) {
+    .testimonial-section {
+        .slick-next {
+            left: 80%;
+        }
+
+        .slick-prev {
+            left: 10%;
+        }
+
+        .slick-next {
+            top: 102%;
+        }
+    }
+
+    .slick-prev {
+        top: 102%;
+    }
+
+    .slick-prev:before,
+    .testimonial-section .slick-next:before {
+        font-size: 35px;
+    }
+}
+/*KEY POINTS SECTION*/
+.keyPoints-section {
+    h4 {
+        font-size: 1.25em;
+    }
+
+    .keyPoint {
+        min-height: 270px;
+        /*    border: 1px solid rgba(199,199,199,.5);*/
+        padding: 10px 15px;
+
+        i {
+            font-size: 4em;
+            color: #fff;
+        }
+
+        h3 {
+            font-size: 2em;
+            color: #fff;
+        }
+
+        p {
+            color: #fff;
+        }
+    }
+}
+
+.keyPointBox {
+    padding: 0;
+}
+
+.keyPoints-section {
+    padding: 40px 15px 20px;
+}
+@media (min-width: 1200px) {
+    .keyPoints-section {
+        padding: 40px 15px 20px;
+    }
+
+    .keyPointBox {
+        /* margin-left: 4%;*/
+        float: none;
+    }
+}
+
+.plus {
+    text-align: center;
+    margin-top: 5%;
+    min-height: 100px !important;
+    font-size: 3.2em;
+    color: #ffffff;
+}
+
+.equals {
+    text-align: center;
+    margin-top: 5%;
+    min-height: 100px !important;
+    font-size: 3.2em;
+    color: #ffffff;
+    font-size: 4em;
+    font-weight: bold;
+    margin-top: 4.5%;
+}
+/*homeContact Section*/
+.homeContact {
+    padding: 70px 0 50px;
+}
+
+.contactSection {
+    .cardbox {
+        padding: 10px 15px 15px;
+        h2 {
+            margin-top: 10px;
+        }
+    }
+    .formBox {
+        min-height: 552px;
+    }
+
+    .sideBox .btn {
+        font-size: 1.1em;
+    }
+}
+@media (min-width: 1000px) {
+    .contactSection .sideBox {
+        height: 164px;
+        margin-bottom: 10px;
+    }
+}
+@media (max-width: 999px) {
+    .contactSection .sideBox {
+        display: none;
+    }
+}

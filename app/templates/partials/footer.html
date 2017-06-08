@@ -1,0 +1,42 @@
+<div class="top-footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-sm-12 col-xs-12 footerSection footerContact">
+                <h4 class="bold">Brennan Pool Care</h4>
+                <h4>Contact Us</h4>
+                <a ui-sref="sales" class="btn wireBtn wireBtnWhite btn-block">{{phone.office}}</a>
+                <a ui-sref="support" class="btn wireBtn wireBtnWhite btn-block">{{email.main}}</a>
+            </div>
+            <div class="footerCenter col-lg-6 col-sm-12 col-xs-12">
+                <div class="col-lg-6 col-sm-12 col-xs-12 footerSection footerProducts">
+                    <h3>Services</h3>
+                    <div class="list-group">
+                        <a ng-repeat="link in servicesSubMenu | limitTo:4" ui-sref="{{link.url}}" title="{{link.name}}" class="list-group-item">{{link.name}}</a>
+                        <a href="services" class="list-group-item"><strong><i class="fa fa-th-list"></i>&nbsp; View All</strong></a>
+                    </div>
+                </div>
+                <!-- <div class="col-lg-6 col-sm-12 col-xs-12 footerSection footerResources">
+                    <h3>Resources</h3>
+                    <div class="list-group">
+                        <span ng-repeat="link in footerMenu">
+                            <a ng-if="link.href === true" href="{{link.url}}" class="list-group-item" title="{{link.name}}" target="_blank">{{link.name}}</a>
+                            <a ng-if="link.href === false" ui-sref="{{link.url}}" title="{{link.name}}" class="list-group-item">{{link.name}}</a>
+                        </span>
+                    </div>
+                </div> -->
+            </div>
+            <div class="col-lg-3 col-sm-12 col-xs-12 footerSection footerSocial">
+                <h3 class="hidden-lg hidden-md">Social</h3>
+                <div class="list-group">
+                    <a ng-repeat="smLink in socialMedia" href="{{smLink.url}}" target="_blank" title="{{smLink.name}}" class="list-group-item"><i class="fa {{smLink.icon}} fa-fw" aria-hidden="true"></i>&nbsp; {{smLink.name}}</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer class="">
+    <div class="container">
+        <p>© {{ today | date: "yyyy" }} <a ui-sref="home" title="Brennan Pool Care">Brennan Pool Care</a>, LLC | All Rights Reserved</p>
+    </div>
+</footer>
+<div id="bottomBar"></div>

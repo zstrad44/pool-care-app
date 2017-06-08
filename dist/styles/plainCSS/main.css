@@ -1,0 +1,251 @@
+/* Main Colors*/
+/* Grays*/
+/* Bootstrap colors*/
+/* Gradients*/
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+html,
+body {
+  background-color: #ffffff;
+  font-family: 'Lato', sans-serif;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+.viewBox {
+  margin-top: 135px;
+  margin-bottom: 40px;
+}
+
+@media (min-width: 1000px) {
+  .viewBox {
+    margin-top: 155px;
+    margin-bottom: 480px;
+  }
+}
+
+/* Back to Top BUTTON*/
+.back-to-top {
+  cursor: pointer;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none;
+  -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.4);
+  box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.4);
+  -webkit-transition: none !important;
+  -o-transition: none !important;
+  transition: none !important;
+  border-radius: 0;
+  background-color: #12529D;
+  border: none;
+  z-index: +1500;
+}
+
+.back-to-top:hover {
+  background-color: #606060 !important;
+  color: #ffffff !important;
+  /* box-shadow: 0 0 3px rgba(0,0,0,0.2);*/
+  -webkit-transition: .3s ease;
+  -o-transition: .3s ease;
+  transition: .3s ease;
+}
+
+.noGutter {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+.noMargin {
+  margin: 0 !important;
+}
+
+.img-shadow {
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.13);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.13);
+}
+
+.cardbox {
+  /* box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23), 0 -6px 6px -6px rgba(0,0,0,0.33);*/
+  -webkit-box-shadow: 0px 2px 10px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 2px 10px 0 rgba(0, 0, 0, 0.3);
+  padding: 10px;
+  border: 1px solid #12529D;
+}
+
+/*TEXT FORMATING STYLES START*/
+.slit {
+  border: none;
+  width: 99%;
+  height: 50px;
+  margin-top: 0;
+  border-bottom: 1px solid #fff;
+  -webkit-box-shadow: 0 20px 20px -20px #aaa;
+  box-shadow: 0 20px 20px -20px #aaa;
+  margin: -10px 0 10px;
+}
+
+p {
+  font-size: 1.2em;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.bolder {
+  font-weight: bolder;
+}
+
+.text-gray {
+  color: #606060;
+}
+
+.text-blue {
+  color: #12529D;
+}
+
+.text-white {
+  color: #fff;
+}
+
+.bg-gray {
+  background-color: #606060;
+}
+
+.bg-blue {
+  background-color: #12529D;
+}
+
+.bg-white {
+  background-color: #fff;
+}
+
+.bg-lightGray {
+  background-color: #f2f2f2;
+}
+
+.bg-offwhite {
+  background-color: #f9f9f9;
+}
+
+.bg-danger {
+  background-color: #ff4444;
+  color: #ffffff;
+}
+
+.bg-danger-dark {
+  background-color: #CC0000;
+  color: #ffffff;
+}
+
+/* Gradients*/
+.blue-gradient {
+  background: #2c74e8;
+  background: -webkit-radial-gradient(center ellipse, #2c74e8 0%, #0068b3 100%);
+  background: -o-radial-gradient(center ellipse, #2c74e8 0%, #0068b3 100%);
+  background: radial-gradient(ellipse at center, #2c74e8 0%, #0068b3 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2c74e8', endColorstr='$blue', GradientType=1 );
+}
+
+.newBlue-gradient {
+  background: #54a1da;
+  background: radial-gradient(ellipse at center, #54a1da, #12529D);
+}
+
+.grayIcon {
+  background-color: #12529D;
+}
+
+.btn-primary {
+  background-color: #12529D !important;
+  border-color: #12529D !important;
+}
+
+/*SQUARE BUTTONS*/
+.squareBtn {
+  border-radius: 0;
+  border-width: 1px;
+  border-style: solid;
+  -webkit-transition: .3s ease;
+  -o-transition: .3s ease;
+  transition: .3s ease;
+}
+
+.squareBtnBlue {
+  background-color: #12529D;
+  color: #fff;
+  border-color: #12529D;
+}
+
+.squareBtnBlue:hover {
+  background-color: transparent;
+  color: #12529D;
+}
+
+.squareBtnWhite {
+  background-color: #fff;
+  color: #606060;
+  border-color: #fff;
+}
+
+.squareBtnWhite:hover {
+  background-color: transparent;
+  color: #fff;
+}
+
+.squareBtnGray {
+  background-color: #606060;
+  color: #fff;
+  border-color: #606060;
+}
+
+.squareBtnGray:hover {
+  background-color: transparent;
+  color: #606060;
+}
+
+/*WIRE BUTTONS*/
+.wireBtn {
+  border-radius: 0;
+  border-width: 1px;
+  background-color: transparent;
+  -webkit-transition: .3s ease;
+  -o-transition: .3s ease;
+  transition: .3s ease;
+}
+
+.wireBtnWhite {
+  border-color: #fff;
+  color: #fff;
+}
+
+.wireBtnWhite:hover {
+  color: #12529D;
+  background-color: #fff;
+}
+
+.wireBtnBlue {
+  border-color: #12529D;
+  color: #12529D;
+}
+
+.wireBtnBlue:hover {
+  color: #fff;
+  background-color: #12529D;
+}
+
+.wireBtnGray {
+  border-color: #606060;
+  color: #606060;
+}
+
+.wireBtnGray:hover {
+  color: #fff;
+  background-color: #606060;
+}

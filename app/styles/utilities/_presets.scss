@@ -1,0 +1,30 @@
+/*Shadows*/
+/*Preset Shadow styles*/
+$shadow-size: 10px; /* shadow size*/
+$shadow-color: #2C3E50;
+/*--------------------------------------------------------------------*/
+/* Shadow Specs*/
+/*--------------------------------------------------------------------*/
+
+/*  CSS Spec:  | style | offset-x | offset-y | blur-radius | spread-radius | color */
+$shadows: (
+	top          :            0          (-$shadow-size)       $shadow-size            (-$shadow-size)       $shadow-color,
+  right        :            $shadow-size         0           $shadow-size            (-$shadow-size)       $shadow-color,
+  bottom       :            0          $shadow-size          $shadow-size            (-$shadow-size)       $shadow-color,
+  left         :            (-$shadow-size)      0           $shadow-size            (-$shadow-size)       $shadow-color,
+  all          :            0          0           $shadow-size                        $shadow-color,
+  inset-top    : inset      0          $shadow-size          $shadow-size            (-$shadow-size)       $shadow-color,
+  inset-right  : inset      (-$shadow-size)      0           $shadow-size            (-$shadow-size)       $shadow-color,
+  inset-bottom : inset      0          (-$shadow-size)       $shadow-size            (-$shadow-size)       $shadow-color,
+  inset-left   : inset      $shadow-size         0           $shadow-size            (-$shadow-size)       $shadow-color,
+  inset-all    : inset      0          0           $shadow-size                        $shadow-color,
+
+  left-right       : (       (-$shadow-size) 0     $shadow-size (-$shadow-size) $shadow-color,       $shadow-size    0     $shadow-size (-$shadow-size) $shadow-color),
+  top-bottom       : (       0     (-$shadow-size) $shadow-size (-$shadow-size) $shadow-color,       0     $shadow-size    $shadow-size (-$shadow-size) $shadow-color),
+  inset-left-right : (inset  $shadow-size    0     $shadow-size (-$shadow-size) $shadow-color, inset (-$shadow-size) 0     $shadow-size (-$shadow-size) $shadow-color),
+  inset-top-bottom : (inset  0     $shadow-size    $shadow-size (-$shadow-size) $shadow-color, inset 0     (-$shadow-size) $shadow-size (-$shadow-size) $shadow-color),
+);
+
+@each $k, $v in $shadows {
+  .#{$k} {-webkit-box-shadow:$v;box-shadow:$v;}
+}
