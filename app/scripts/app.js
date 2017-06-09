@@ -34,6 +34,16 @@ angular
             templateUrl: '/templates/home.html',
             controller: 'HomeCtrl'
         })
+            .state('services', {
+            title : 'Our Services',
+            robots : 'follow,index',
+            description : 'Family owned and operated pool service and repair company based in the east valley.',
+            canonical : 'http://brennanpoolcare.com/services',
+            url: '/services',
+            parent: 'master',
+            templateUrl: '/templates/services.html',
+            controller: 'ServiceMasterCtrl'
+        })
             .state('service-master', {
             templateUrl: '/templates/serviceMaster.html',
             abstract: true,
@@ -47,7 +57,7 @@ angular
             description : 'Family owned and operated pool service and repair company based in the east valley.',
             canonical : 'http://brennanpoolcare.com/chlorine-bath',
             url: '/chlorine-bath',
-            parent: 'master',
+            parent: 'service-master',
             templateUrl: '/templates/servicePages/chlorine-bath.html',
             controller: 'ServicePageCtrl'
         })
@@ -57,7 +67,7 @@ angular
             description : 'Family owned and operated pool service and repair company based in the east valley.',
             canonical : 'http://brennanpoolcare.com/dedicated-suction-line',
             url: '/dedicated-suction-line',
-            parent: 'master',
+            parent: 'service-master',
             templateUrl: '/templates/servicePages/dedicated-suction-line.html',
             controller: 'ServicePageCtrl'
         })
@@ -67,7 +77,7 @@ angular
             description : 'Family owned and operated pool service and repair company based in the east valley.',
             canonical : 'http://brennanpoolcare.com/drain-and-fill-pool-service',
             url: '/drain-and-fill-pool-service',
-            parent: 'master',
+            parent: 'service-master',
             templateUrl: '/templates/servicePages/drain-and-fill-pool-service.html',
             controller: 'ServicePageCtrl'
         })
@@ -77,7 +87,7 @@ angular
             description : 'Family owned and operated pool service and repair company based in the east valley.',
             canonical : 'http://brennanpoolcare.com/green-to-clean-pool-service',
             url: '/green-to-clean-pool-service',
-            parent: 'master',
+            parent: 'service-master',
             templateUrl: '/templates/servicePages/green-to-clean-pool-service.html',
             controller: 'ServicePageCtrl'
         })
@@ -87,7 +97,7 @@ angular
             description : 'Family owned and operated pool service and repair company based in the east valley.',
             canonical : 'http://brennanpoolcare.com/pool-acid-wash',
             url: '/pool-acid-wash',
-            parent: 'master',
+            parent: 'service-master',
             templateUrl: '/templates/servicePages/pool-acid-wash.html',
             controller: 'ServicePageCtrl'
         })
@@ -97,7 +107,7 @@ angular
             description : 'Family owned and operated pool service and repair company based in the east valley.',
             canonical : 'http://brennanpoolcare.com/salt-water-conversion',
             url: '/salt-water-conversion',
-            parent: 'master',
+            parent: 'service-master',
             templateUrl: '/templates/servicePages/salt-water-conversion.html',
             controller: 'ServicePageCtrl'
         })
@@ -107,7 +117,7 @@ angular
             description : 'Family owned and operated pool service and repair company based in the east valley.',
             canonical : 'http://brennanpoolcare.com/pool-filter-cleaning',
             url: '/pool-filter-cleaning',
-            parent: 'master',
+            parent: 'service-master',
             templateUrl: '/templates/servicePages/pool-filter-cleaning.html',
             controller: 'ServicePageCtrl'
         })
@@ -117,7 +127,7 @@ angular
             description : 'Family owned and operated pool service and repair company based in the east valley.',
             canonical : 'http://brennanpoolcare.com/tile-cleaning-pool-service',
             url: '/tile-cleaning-pool-service',
-            parent: 'master',
+            parent: 'service-master',
             templateUrl: '/templates/servicePages/tile-cleaning-pool-service.html',
             controller: 'ServicePageCtrl'
         })
@@ -130,7 +140,7 @@ angular
             description : 'Family owned and operated pool service and repair company based in the east valley.',
             canonical : 'http://brennanpoolcare.com/contact',
             url: '/contact',
-            parent: 'master',
+            parent: 'service-master',
             templateUrl: '/templates/contact.html',
             controller: 'ContactCtrl'
         });

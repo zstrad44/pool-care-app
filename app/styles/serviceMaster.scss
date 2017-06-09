@@ -1,1 +1,32 @@
 @import "utilities/colors";
+
+.serviceSidebar {
+    .sideBox {
+        h3 {
+            color: $gray;
+            margin: 5px 0;
+        }
+
+    }
+    .servicesSideBox {
+        .list-group {
+
+            a.list-group-item {
+                font-size: 1.1em;
+                border-radius: 0;
+                -webkit-transition: .3s ease;
+                -o-transition: .3s ease;
+                transition: .3s ease;
+                &:last-child {
+                    background-color: $gray;
+                    color: #ffffff;
+                }
+                &:hover {
+                    background-color: $blue;
+                    color: #ffffff;
+                }
+
+            }
+        }
+    }
+}

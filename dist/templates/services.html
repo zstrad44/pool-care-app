@@ -1,0 +1,36 @@
+<div class="servicesPage" ng-controller="ServiceMasterCtrl">
+    <div class="container-fluid">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-lg-12 mainArea">
+                    <div class="pageHead">
+                        <h1>Services</h1>
+                        <hr>
+                    </div>
+                    <div class="subHead text-center">
+                        <h3>How Can We Help You?</h3>
+                        <p>PLEASE SELECT ONE TO LEARN MORE</p>
+                        <hr>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 col-lg-4 serviceAreaBox" ng-repeat="service in services">
+                            <a href="{{service.url}}" title="{{service.name}}">
+                                <div class="cardbox text-center" style="background-image: url(/assets/stock_images/service_images/{{service.img}})">
+                                    <h3>{{service.name}}</h3>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-xs-12 col-lg-4 serviceAreaBox customBox">
+                            <a href="contact" title="Contact US">
+                                <div class="cardbox text-center">
+                                    <i class="fa fa-wrench"></i>
+                                    <h3>Request Custom Service</h3>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

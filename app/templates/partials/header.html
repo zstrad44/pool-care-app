@@ -18,6 +18,7 @@
                     <a ng-if="link.hasSubmenu === true" class="dropdown-toggle main-btn" data-toggle="dropdown" href="#">{{link.name}} <b class="caret" ng-cloak></b></a>
                     <ul ng-if="link.hasSubmenu === true" class="dropdown-menu" ng-cloak>
                         <li ng-repeat="subLink in link.subMenu"><a ui-sref="{{subLink.url}}" title="{{subLink.name}}" data-toggle="collapse" data-target="#myNavbar" ng-click="activeButton()" ng-cloak><i class="fa {{subLink.icon}}"></i>&nbsp; {{subLink.name}}</a></li>
+                        <li><a ui-sref="services" title="View All Services" data-toggle="collapse" data-target="#myNavbar" ng-click="activeButton()" ng-cloak><i class="fa fa-th-list"></i>&nbsp; View All</a></li>
                     </ul>
                 </li>
             </ul>

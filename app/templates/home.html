@@ -82,13 +82,13 @@
             </div>
         </div>
     </div>
-    <div class="container-fluid inset-top-bottom bg-offwhite">
+    <div class="container-fluid inset-top-bottom bg-offwhite" ng-controller="ServiceMasterCtrl">
         <div class="container">
             <div class="row cardRow">
                 <div class="col-xs-12 sectionHead">
                     <h3><i class="fa fa-life-ring"></i>&nbsp; Our Services</h3>
                 </div>
-                <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 outerbox keyBox slideanim" ng-repeat="service in homeServices">
+                <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 outerbox keyBox slideanim" ng-repeat="service in services">
                     <a href="{{service.url}}" title="{{service.name}}">
                         <div class="cardbox text-center" style="background-image: url(/assets/stock_images/service_images/{{service.img}})">
                             <h3>{{service.name}}</h3>
