@@ -140,7 +140,7 @@ angular
             description : 'Family owned and operated pool service and repair company based in the east valley.',
             canonical : 'http://brennanpoolcare.com/contact',
             url: '/contact',
-            parent: 'service-master',
+            parent: 'master',
             templateUrl: '/templates/contact.html',
             controller: 'ContactCtrl'
         });

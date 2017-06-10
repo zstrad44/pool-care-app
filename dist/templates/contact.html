@@ -1,0 +1,21 @@
+<div class="contactPage" ng-controller="ContactCtrl">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-lg-8">
+                <!--Contact Form Included from partial  -->
+                <div class="cardbox formBox">
+                    <h2><i class="fa fa-envelope"></i> Contact Us</h2>
+                    <h3>Fill out the form below and we will contact you soon.</h3>
+                    <hr>
+                    <div ng-include="'/templates/partials/contact-form.html'"></div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-lg-4">
+                <div class="cardbox sidebox">
+                    <h3><i class="fa fa-mobile-phone"></i>&nbsp; Call Us</h3>
+                    <a href="tel:{{phone.office}}" class="btn squareBtn squareBtnBlue btn-block btn-lg">{{phone.office}}</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
